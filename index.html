@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Cinematic website sample. See how your business could look online." />
+  <title>Website Sample — Template for Your Business</title>
+  <link rel="icon" type="image/png" href="images/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- CINEMATIC CANVAS BACKGROUND -->
+  <canvas id="gl-canvas"></canvas>
+  <!-- PARTICLE OVERLAY -->
+  <canvas id="particle-canvas"></canvas>
+  <!-- GRAIN OVERLAY -->
+  <div class="grain-overlay"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" data-scroll="0">
+        <img src="images/logo.svg" alt="YOUR COMPANY Logo" class="logo-img" />
+        <span class="logo-text">YOUR <span class="logo-accent">COMPANY</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" data-scroll="1" class="nav-link">Services</a></li>
+        <li><a href="#" data-scroll="2" class="nav-link">Collections</a></li>
+        <li><a href="#" data-scroll="3" class="nav-link">Manufacturing</a></li>
+        <li><a href="#" data-scroll="4" class="nav-link">About Us</a></li>
+        <li><a href="#" data-scroll="5" class="nav-link nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav-scrim" id="nav-scrim" hidden></div>
+  <div class="nav-drawer" id="nav-drawer" hidden>
+    <button class="drawer-close" id="drawer-close" aria-label="Close">✕</button>
+    <ul class="drawer-links" id="drawer-links">
+      <li><a href="#" data-scroll="1" class="drawer-link">Services</a></li>
+      <li><a href="#" data-scroll="2" class="drawer-link">Collections</a></li>
+      <li><a href="#" data-scroll="3" class="drawer-link">Manufacturing</a></li>
+      <li><a href="#" data-scroll="4" class="drawer-link">About Us</a></li>
+      <li><a href="#" data-scroll="5" class="drawer-link">Contact Us</a></li>
+    </ul>
+    <div class="drawer-contacts">
+      <a href="#" target="_blank" class="drawer-social">Telegram</a>
+      <a href="#" target="_blank" class="drawer-social">Your Links</a>
+    </div>
+  </div>
+
+  <!-- MAIN SCROLL CONTAINER -->
+  <div id="ui-layer">
+    <div class="stage">
+
+      <!-- SECTION 0: HERO -->
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="page-inner hero-inner">
+          <img src="images/logo.svg" alt="YOUR COMPANY" class="hero-logo reveal-3d">
+          <div class="hero-badge reveal-3d">YOUR BRAND • YOUR NICHE • YOUR SPECIALTY </div>
+          <h1 class="hero-title reveal-3d">
+            <span class="gradient-text">YOUR COMPANY NAME HERE</span>
+          </h1>
+          <p class="hero-subtitle reveal-3d">Here you can write your slogan, a brief description, or a hot offer — anything you like!</p>
+          <div class="hero-cta-group reveal-3d">
+            <a href="#" data-scroll="2" class="btn-primary">Custom Button</a>
+            <a href="#" data-scroll="5" class="btn-outline">Your Links</a>
+          </div>
+          <div class="hero-scroll-hint">
+            <div class="scroll-line"></div>
+            <span>scroll down</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 1: SERVICES -->
+      <section class="page" data-index="1" id="services">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Your Services</div>
+          <h2 class="section-title reveal-3d">Your <span class="gradient-text">Services</span></h2>
+          <p class="section-desc reveal-3d">From sourcing raw materials to the finished product — every step is under our control</p>
+          <div class="services-grid reveal-3d">
+            <div class="service-card">
+              <div class="service-icon">🦊</div>
+              <h3>Raw Material Sourcing</h3>
+              <p>Selection and procurement of premium fur pelts. Mink, fox, sable, karakul, and other top-grade fur varieties.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🎨</div>
+              <h3>Processing & Dyeing</h3>
+              <p>Professional tanning, dyeing, and fur treatment. Trendy shades, natural colors, and long-lasting dyes.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">✂️</div>
+              <h3>Custom Design</h3>
+              <p>Development of original patterns and models. Custom tailoring to your exact measurements and preferences.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">👒</div>
+              <h3>Fur Headwear</h3>
+              <p>Exclusive hats, berets, trapper hats, and fedoras. Mink, fox, muskrat — any style and size available.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🏪</div>
+              <h3>Wholesale & Retail</h3>
+              <p>Wholesale supply for stores and boutiques. Retail sales of premium fur garments.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">💎</div>
+              <h3>Luxury Fur Sets</h3>
+              <p>Complete sets including a fur coat, hat, and accessories. The perfect gift or a head-to-toe look for a special occasion.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: COLLECTIONS -->
+      <section class="page" data-index="2" id="collections">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Here you can showcase your work</div>
+          <h2 class="section-title reveal-3d">Examples of <span class="gradient-text">your work</span></h2>
+          <p class="section-desc reveal-3d">Every piece is a work of art. Find the style that's right for you.</p>
+          <div class="collections-grid reveal-3d">
+            <div class="collection-card card-large">
+              <img src="images/hero-coat.png" alt="Mink fur coat" class="collection-img" />
+              <div class="collection-overlay">
+                <span class="collection-label">Mink · Sable</span>
+                <h3>Classic Fur Coats</h3>
+                <p>Full-length and short styles crafted from select mink and sable</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <img src="images/hats.png" alt="Fur hats" class="collection-img" />
+              <div class="collection-overlay">
+                <span class="collection-label">Hat Collection</span>
+                <h3>Headwear</h3>
+                <p>Over 50 styles made from a variety of fur types</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <img src="images/texture.png" alt="Fur texture" class="collection-img" />
+              <div class="collection-overlay">
+                <span class="collection-label">Natural Fur</span>
+                <h3>Fur Quality</h3>
+                <p>Hand-selected top-grade raw materials</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: PRODUCTION -->
+      <section class="page" data-index="3" id="production">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Our Process</div>
+          <h2 class="section-title reveal-3d">The Atelier of<br><span class="gradient-text">YOUR COMPANY NAME HERE</span></h2>
+          <p class="section-desc reveal-3d">In-house manufacturing — Quality Guaranteed at every stage</p>
+          <div class="production-layout reveal-3d">
+            <div class="production-image-wrap">
+              <img src="images/workshop.png" alt="Our workshop" class="production-img" />
+            </div>
+            <div class="production-stats">
+              <div class="stat-card">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">years in the fur industry</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">pieces crafted per year</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">genuine natural fur</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">unique styles</span>
+              </div>
+              <div class="production-steps">
+                <div class="prod-step"><span class="step-num">01</span><span class="step-text">Sourcing raw materials from trusted suppliers</span></div>
+                <div class="prod-step"><span class="step-num">02</span><span class="step-text">Tanning and processing the fur</span></div>
+                <div class="prod-step"><span class="step-num">03</span><span class="step-text">Pattern development and design</span></div>
+                <div class="prod-step"><span class="step-num">04</span><span class="step-text">Expert craftsmanship and tailoring</span></div>
+                <div class="prod-step"><span class="step-num">05</span><span class="step-text">Quality control and packaging</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: ABOUT -->
+      <section class="page" data-index="4" id="about">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">About Us</div>
+          <h2 class="section-title reveal-3d">Why Clients Choose<br><span class="gradient-text">YOUR COMPANY NAME HERE</span></h2>
+          <p class="section-desc reveal-3d">Share your achievements, highlight great testimonials, and tell your story</p>
+          <div class="about-grid reveal-3d">
+            <div class="about-card">
+              <div class="about-icon">🌿</div>
+              <h3>YOUR BRAND • YOUR NICHE • YOUR SPECIALTY</h3>
+              <p>We oversee the entire process — from sourcing raw materials to the finished product. No middlemen, just direct quality.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🤝</div>
+              <h3>Wholesale & Retail</h3>
+              <p>We work with individual clients and wholesale buyers alike — supplying boutiques and stores across the Miami Design District and Bal Harbour.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">👑</div>
+              <h3>Premium Quality</h3>
+              <p>We use only first-grade materials. Every fur coat is an investment in style and warmth that lasts for years.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🎯</div>
+              <h3>Personalized Approach</h3>
+              <p>Custom tailoring to your measurements and sketches. We bring any design vision to life, including non-standard sizes.</p>
+            </div>
+          </div>
+          <div class="about-cta reveal-3d">
+            <a href="#" target="_blank" class="btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.16 14.26l-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.658.326z"/></svg>
+              Message Us on Telegram
+            </a>
+            <a href="#" target="_blank" class="btn-outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: CONTACT -->
+      <section class="page" data-index="5" id="contact">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Contact</div>
+          <h2 class="section-title reveal-3d">Let's start <span class="gradient-text">working together</span></h2>
+          <p class="section-desc reveal-3d">Submit a request — we'll find the perfect piece to match your style and budget</p>
+          <div class="contact-layout reveal-3d">
+            <div class="contact-form-wrap">
+              <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                  <label for="name">Your name</label>
+                  <input type="text" id="name" name="name" placeholder="What should we call you?" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone or Telegram</label>
+                  <input type="text" id="phone" name="phone" placeholder="+1 (___) ___-____" required />
+                </div>
+                <div class="form-group">
+                  <label for="interest">What are you interested in?</label>
+                  <select id="interest" name="interest">
+                    <option value="">Your industry</option><option>Healthcare / Beauty</option><option>Restaurants / HoReCa</option><option>Construction / Remodeling</option><option>Architecture / Design</option><option>IT / Consulting</option><option>Auto Business / Detailing</option><option>Fitness / Sports</option><option>Education</option><option>Tourism / Hotels</option><option>Manufacturing</option><option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Your preferences</label>
+                  <textarea id="message" name="message" rows="3" placeholder="Color, size, budget, special requests..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary form-submit">
+                  Submit Request
+                  <span class="btn-arrow">→</span>
+                </button>
+              </form>
+            </div>
+            <div class="contact-info-wrap">
+              <div class="contact-info-card">
+                <h3>Contact</h3>
+                <div class="contact-item">
+                  <span class="contact-icon">📱</span>
+                  <div>
+                    <strong>Telegram</strong>
+                    <a href="#" target="_blank">YOUR CONTACT</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📸</span>
+                  <div>
+                    <strong>Your Links</strong>
+                    <a href="#" target="_blank">YOUR CONTACT</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">⏰</span>
+                  <div>
+                    <strong>Business Hours</strong>
+                    <span>Mon–Sat: 9:00 AM – 8:00 PM</span>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-promise-card">
+                <div class="promise-icon">✦</div>
+                <h4>Our Promise</h4>
+                <p>We'll get back to you within 30 minutes. We'll help you find the perfect piece to match your preferences and budget.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:32px"><a href="https://unityspirit.github.io/global-plus-en/" class="btn-outline" style="font-size:16px;padding:14px 40px;display:inline-block;text-decoration:none">BACK TO MAIN PAGE</a></div>
+    <!-- FOOTER -->
+        <footer class="footer">
+          <div class="footer-inner">
+            <span class="footer-logo">YOUR COMPANY</span>
+            <span class="footer-copy">© 2025 YOUR COMPANY. YOUR BRAND • YOUR NICHE • YOUR SPECIALTY.</span>
+            <div class="footer-socials">
+              <a href="#" target="_blank">TG</a>
+              <a href="#" target="_blank">IG</a>
+            </div>
+          </div>
+        </footer>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
